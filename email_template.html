@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        table {
+            width: 200px;
+            border-top: 1px solid #999;
+            border-left: 1px solid #999;
+            border-spacing: 0;/*去掉单元格间隙*/
+
+        }
+        table th {
+            text-align: center;
+            background-color: antiquewhite;
+            height: 30px;
+            width: 300px;
+            padding: 10px 30px;
+            border-bottom: 1px solid #999;
+            border-right: 1px solid #999;
+
+        }
+        table td {
+            text-align: center;
+            background-color: lightgrey;
+            height: 30px;
+            width: 300px;
+            padding: 10px 30px;
+            border-bottom: 1px solid #999;
+            border-right: 1px solid #999;
+        }
+
+    </style>
+</head>
+<body>
+<div style="text-align: center">
+    <b>{{ .Spre }}</b>
+</div>
+</br>
+</br>
+<div>
+<table align="center">
+    <tr>
+        <td>
+            <table>
+                {{range .SEntry}}
+                    <tr>
+                        <th>
+                            {{ . }}
+                        </th>
+                    </tr>
+                {{end}}
+            </table>
+        </td>
+        <td>
+            <table>
+                {{range .Srow}}
+                    <tr>
+                        <td>
+                            {{ . }}
+                        </td>
+                    </tr>
+                {{end}}
+            </table>
+        </td>
+</table>
+</div>
+</br>
+</br>
+    <div style="text-align: right">
+        {{ .Ssuf }}
+        </br>
+        </br>
+        {{ .Stime }}
+    </div>
+</br>
+</br>
+</body>
+</html>
