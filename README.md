@@ -8,7 +8,7 @@
 工资条发送展示:
 
 1.单表头的：
-![image](https://github.com/tanganyu1114/emailgo/blob/master/00001.jpg)
+![image](https://github.com/tanganyu1114/emailgo/blob/master/picture/00001.jpg)
 
 2.多表头的：
-![img](https://github.com/tanganyu1114/emailgo/blob/master/000002.jpg)
+![img](https://github.com/tanganyu1114/emailgo/blob/master/picture/00002.jpg)
