@@ -5,76 +5,53 @@
     <title>Title</title>
     <style>
         table {
-            width: 200px;
+            width: 600px;
             border-top: 1px solid #999;
             border-left: 1px solid #999;
             border-spacing: 0;/*去掉单元格间隙*/
-
+            border-collapse: collapse;
         }
         table th {
             text-align: center;
-            background-color: antiquewhite;
+            font-size: 16px;
             height: 30px;
-            width: 300px;
-            padding: 10px 30px;
+            width: 200px;
             border-bottom: 1px solid #999;
             border-right: 1px solid #999;
 
         }
         table td {
             text-align: center;
-            background-color: lightgrey;
+            font-size: 16px;
             height: 30px;
-            width: 300px;
-            padding: 10px 30px;
+            width: 200px;
             border-bottom: 1px solid #999;
             border-right: 1px solid #999;
         }
-
+        table tr:nth-child(odd) {
+            background-color: lightgrey;
+        }
+        table tr:nth-child(even) {
+            background-color: white;
+        }
     </style>
 </head>
 <body>
 <div style="text-align: center">
-    <b>{{ .Spre }}</b>
+    <p><b>{{ .Spre }}</b></p>
 </div>
-</br>
-</br>
 <div>
-<table align="center">
-    <tr>
-        <td>
-            <table>
-                {{range .SEntry}}
-                    <tr>
-                        <th>
-                            {{ . }}
-                        </th>
-                    </tr>
-                {{end}}
-            </table>
-        </td>
-        <td>
-            <table>
-                {{range .Srow}}
-                    <tr>
-                        <td>
-                            {{ . }}
-                        </td>
-                    </tr>
-                {{end}}
-            </table>
-        </td>
-</table>
+    <table align="center">
+        {{.Sbody}}
+    </table>
 </div>
 </br>
-</br>
-    <div style="text-align: right">
-        {{ .Ssuf }}
-        </br>
-        </br>
-        {{ .Stime }}
-    </div>
-</br>
+<div style="text-align: right">
+    <p>{{ .Ssuf }}</p>
+</div>
+<div style="text-align: right">
+    <p>{{ .Stime }}</p>
+</div>
 </br>
 </body>
 </html>
